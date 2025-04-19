@@ -33,6 +33,15 @@ int pop(Stack* stack) {
     return value;
 }
 
+int peek(Stack* stack) {
+    // 파라미터로 stack 의 포인터위치 받음
+    if (stack->rsp == 0) {
+        return 0;
+    }
+
+    return stack->stack[stack->rsp];
+}
+
 int main() {
     Stack *stack;
     stack->rsp = 0;
